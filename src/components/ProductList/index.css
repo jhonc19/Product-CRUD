@@ -1,0 +1,23 @@
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.table th {
+  background-color: #232946;
+  color: #fffffe;
+  height: 100%;
+}
+
+.table td {
+  background-color: #fffffe;
+  color: #232946;
+  height: 100%;
+}

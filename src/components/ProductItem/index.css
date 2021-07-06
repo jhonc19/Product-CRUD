@@ -1,0 +1,21 @@
+.actions-group {
+  display: flex;
+}
+
+.icon-button {
+  cursor: pointer;
+  padding: 0 5px;
+  border-width: 0px;
+  background-color: transparent;
+  color: #232946;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.icon-button:focus,
+.icon-button:hover,
+.icon-button:visited,
+.icon-button:link,
+.icon-button:active {
+  text-decoration: none;
+}

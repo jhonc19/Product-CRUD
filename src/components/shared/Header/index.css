@@ -1,0 +1,31 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  padding: 20px 20px 20px 20px;
+  align-items: center;
+}
+
+.menu-link:hover {
+  color: #fffffe;
+  cursor: pointer;
+  text-decoration: 'none';
+}
+
+.menu-link:focus,
+.menu-link:hover,
+.menu-link:visited,
+.menu-link:link,
+.menu-link:active {
+  text-decoration: none;
+}
+
+.menu-link {
+  padding: 0 15px;
+  color: #b8c1ec;
+}
+
+.menu-content {
+  display: flex;
+  align-items: center;
+}
