@@ -14,11 +14,13 @@ const ProductState = (props) => {
 
   const getProducts = async () => {
     try {
-      const resultado = await axios.get('http://localhost:4000/restaurant');
+      const resultado = await axios.get(
+        'https://product-node-crud.herokuapp.com/product'
+      );
 
       dispatch({
         type: 'LLENAR_PRODUCTOS',
-        payload: resultado.data,
+        payload: resultado.data.data,
       });
     } catch (error) {
       console.log(error);
@@ -27,7 +29,7 @@ const ProductState = (props) => {
 
   const addProduct = async (producto) => {
     try {
-      await axios.post('http://localhost:4000/restaurant', {
+      await axios.post('https://product-node-crud.herokuapp.com/product', {
         ...producto,
       });
 
@@ -43,11 +45,12 @@ const ProductState = (props) => {
   const getProduct = async (id) => {
     try {
       const resultado = await axios.get(
-        `http://localhost:4000/restaurant?id=${id}`
+        `https://product-node-crud.herokuapp.com/product/${id}`
       );
+
       dispatch({
         type: 'OBTENER_PRODUCTO',
-        payload: resultado.data[0],
+        payload: resultado.data.data[0],
       });
     } catch (error) {
       console.log(error);
@@ -56,7 +59,7 @@ const ProductState = (props) => {
 
   const editProduct = async (producto) => {
     try {
-      await axios.put('http://localhost:4000/restaurant/' + producto.id, {
+      await axios.put('https://product-node-crud.herokuapp.com/product', {
         ...producto,
       });
 
@@ -71,7 +74,9 @@ const ProductState = (props) => {
 
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/restaurant/${id}`);
+      await axios.delete(
+        `https://product-node-crud.herokuapp.com/product/${id}`
+      );
       dispatch({
         type: 'ELIMINAR_PRODUCTO',
         payload: true,

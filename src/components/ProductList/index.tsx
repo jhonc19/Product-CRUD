@@ -8,7 +8,6 @@ interface ProductListProps {
 }
 
 const ProductList = ({ products }: ProductListProps) => {
-  
   return (
     <table className="table">
       <thead>

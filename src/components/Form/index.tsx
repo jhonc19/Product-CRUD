@@ -11,6 +11,7 @@ interface FormProps {
 }
 
 const initDataForm: Product = {
+  id: '',
   name: '',
   price: '',
   color: '',
