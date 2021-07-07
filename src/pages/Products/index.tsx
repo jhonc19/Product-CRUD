@@ -15,14 +15,14 @@ const Products = () => {
 
   useEffect(() => {
     deleteOk && getProducts();
-    
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deleteOk]);
 
   return (
     <div className="container">
       <h1 className="page-title text-3xl">Productos</h1>
-      {productList.length > 0 && <ProductList products={productList} />}
+      {productList && <ProductList products={productList} />}
     </div>
   );
 };
